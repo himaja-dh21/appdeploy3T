@@ -19,13 +19,6 @@ app.use("/", require("./routes/SignupRouter"));
 app.use("/", require("./routes/EditRouter"));
 app.use("/", require("./routes/DeleteRouter"));
 
-const path = require("path");
-app.use(express.static(path.join(__dirname, './client/build')));
-
-app.get(/.*/, (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
-
 app.post("/validateToken", upload.none(), async(req,res)=>{
     console.log(req.body)
     let decryptedCredentials = jwt.verify(req.body.token,"mykey")
@@ -49,6 +42,13 @@ app.post("/validateToken", upload.none(), async(req,res)=>{
         res.json({status:"Failed", msg: "User doesn't exist"})
     }
 })
+
+const path = require("path");
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Listening to Port ${process.env.PORT} successfully!!`)
