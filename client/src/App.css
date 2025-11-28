@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+form h2{
+  color: purple;
+}
+
+form{
+  display: inline-block;
+  background-color: plum;
+  padding: 20px;
+  border: 2px solid indigo;
+  margin-top: 30px;
+}
+form label{
+  width: 120px;
+  display: inline-block;
+  text-align: left;
+}
+form input{
+  width: 200px;
+}
+form div{
+  margin: 20px;
+}
+button{
+  background-color: rgb(107, 27, 163);
+  font-size: 0.9rem;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+img{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 2px solid grey;
+}
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: plum;
+  padding: 10px;
+  margin-top: 20px;
+}
+nav a{
+  text-decoration: none;
+  color: indigo;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+h1{
+  color: purple;
+}
+h2{
+  color: green;
+}
+.delButton{
+  background-color: red;
+  color: white;
+}
